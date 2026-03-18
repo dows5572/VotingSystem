@@ -19,6 +19,4 @@ REMINDERS
 2. Tablets
 3. Desktops
 
-- (lets do this one last since di naman surey if sir wants responsiveness although its the first one that should be done)
-
-hi bruh
+- (lets do this one last since di naman sure if sir wants responsiveness although its the first one that should be done)
