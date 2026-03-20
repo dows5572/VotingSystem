@@ -1,23 +1,40 @@
+// for hiding message box
+function hideMessageBox(){
+    $("#message_box").hide();
+    console.log("hidden now");
+}
+
+hideMessageBox();
+
 // login 
-$("#loginBtn").click(function(){
+$("#loginBtn").click(login);
+
+function login(){
     let username = $("#username").val();
     let password = $("#password").val();
 
     $.ajax({
-        url: "../control/login.js",
+        url: "control/authorizationControl.php",
         type: "POST",
+        dataType: "json",
         data: {
+            action: "loginUser",
             username: username,
-            password: password
+            password: password,
         },
-        success: function(){
-            alert("success login");
+        success: function(response){
+            $("#message_box").text(response.message);
+            $("#message_box").fadeIn(3000);
+            if(response.status == "success"){
+                window.location.href = response.redirect;
+            }
         },
         error: function(){
-            alert("error login");
+            $("#message_box").text("Something was wrong. Try again.");
+            $("#message_box").fadeIn();
         }
     });
-});
+}
 
 // register
 $("#registerBtn").click(function(){

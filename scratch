@@ -15,10 +15,24 @@ model - db query
 html 
 -> js (let me do sum before i send u this data) 
 -> php (heres the data nigga) 
--> js (thanks nigga heres the data, messages if success or error) 
+-> js (thanks nigga i got the data, messages if success or error) 
 -> html (got result)
 
-view must not see the model nigga its like aldub 
-only the controller must connect the bridge between those two niggas
- 
+Model should only:
+-Talk to the database
+-Handle data validation
+-Define relationships
+
+Controller should only:
+-Receive requests
+-Call the Model for data
+-Pass data to the View
+-Never have heavy logic (keep it thin!)
+
+View should only:
+-Display data
+-Never query the database
+-Never have business logic
+-Just loops and conditionals are fine
+
 */

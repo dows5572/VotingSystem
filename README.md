@@ -1,14 +1,32 @@
-REMINDERS
+# REMINDERS
+
+### Goals
+1. Readability
+    - so we could debug each other's code easily
+2. Organization
+3. Collaboration
+
+
+### Rules
+0. Avoid modifying anything that isnt your part
+    - ask for permission with either the member who owns that or with me (Stephen)
+1. View Folder
+    - must only consist of User Interface files, no logic
+2. Model Folder
+    - must be the only one that contains SQL operations
+3. CSS and HTML alignment
+    - make sure CSS follows the same order as their HTML counterparts for readability and easier debugging
+
 
 ### Naming conventions
-- make it make sense
-1. Variables | ID - snake_case
-2. Method / Functions - camelCase
-
-
-### CSS and HTML alignment
-- make sure the html flow and the css flow are in the same order for easier debugging
-- the styling should be kept minimal/simple for now, lets not focus onnat shi yet
+- make it make sense, make it understandable
+1. snake_case
+    * for variable;
+    * html id;
+    * db column
+2. camelCase
+    * for method/function;
+    * for filenames
 
 
 ### Viewports

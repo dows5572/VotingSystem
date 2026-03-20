@@ -1,10 +1,9 @@
 <?php
 
-$conn = new mysqli("localhost", "root", "", "VotingSystem");
+    $conn = new mysqli("localhost", "root", "", "VotingSystem");
 
-if($conn->connect_error){
-    echo "error";
-}
-
+    if($conn->connect_error){
+        echo "error";
+    }
 
 ?>
